@@ -11,7 +11,12 @@ uses
 
 type
 { TProtocolMessageType }
-  TProtocolMessageType = (pmtUnknown, pmtPing, pmtPong);
+  TProtocolMessageType = (
+    pmtUnknown,
+    pmtHandshake,
+    pmtPing,
+    pmtPong
+  );
 
 { TProtocolMessage }
   TProtocolMessage = class(TObject)

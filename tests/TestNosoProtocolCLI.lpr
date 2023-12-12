@@ -5,6 +5,7 @@ program TestNosoProtocolCLI;
 uses
   Classes
 , consoletestrunner
+, TestNosoProtocolMessagesHandshake
 , TestNosoProtocolMessagesPing
 , TestNosoProtocolMessagesPong
 ;

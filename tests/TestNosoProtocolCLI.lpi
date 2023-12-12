@@ -106,21 +106,29 @@
         <IsPartOfProject Value="True"/>
       </Unit0>
       <Unit1>
-        <Filename Value="messages/testnosoprotocolmessagesping.pas"/>
+        <Filename Value="messages/testnosoprotocolmessageshandshake.pas"/>
         <IsPartOfProject Value="True"/>
       </Unit1>
       <Unit2>
-        <Filename Value="messages/testnosoprotocolmessagespong.pas"/>
+        <Filename Value="../src/messages/nosoprotocol.messages.handshake.pas"/>
         <IsPartOfProject Value="True"/>
       </Unit2>
       <Unit3>
-        <Filename Value="../src/messages/nosoprotocol.messages.ping.pas"/>
+        <Filename Value="messages/testnosoprotocolmessagesping.pas"/>
         <IsPartOfProject Value="True"/>
       </Unit3>
       <Unit4>
-        <Filename Value="../src/messages/nosoprotocol.messages.pong.pas"/>
+        <Filename Value="../src/messages/nosoprotocol.messages.ping.pas"/>
         <IsPartOfProject Value="True"/>
       </Unit4>
+      <Unit5>
+        <Filename Value="messages/testnosoprotocolmessagespong.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit5>
+      <Unit6>
+        <Filename Value="../src/messages/nosoprotocol.messages.pong.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit6>
     </Units>
   </ProjectOptions>
   <CompilerOptions>

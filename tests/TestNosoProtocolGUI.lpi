@@ -114,31 +114,41 @@
         <PackageName Value="FCL"/>
       </Item3>
     </RequiredPackages>
-    <Units Count="5">
+    <Units Count="7">
       <Unit0>
         <Filename Value="TestNosoProtocolGUI.lpr"/>
         <IsPartOfProject Value="True"/>
       </Unit0>
       <Unit1>
+        <Filename Value="messages/testnosoprotocolmessageshandshake.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="TestNosoProtocolMessagesHandshake"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="../src/messages/nosoprotocol.messages.handshake.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="NosoProtocol.Messages.Handshake"/>
+      </Unit2>
+      <Unit3>
         <Filename Value="messages/testnosoprotocolmessagesping.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="TestNosoProtocolMessagesPing"/>
-      </Unit1>
-      <Unit2>
+      </Unit3>
+      <Unit4>
         <Filename Value="../src/messages/nosoprotocol.messages.ping.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="NosoProtocol.Messages.Ping"/>
-      </Unit2>
-      <Unit3>
-        <Filename Value="../src/messages/nosoprotocol.messages.pong.pas"/>
-        <IsPartOfProject Value="True"/>
-        <UnitName Value="NosoProtocol.Messages.Pong"/>
-      </Unit3>
-      <Unit4>
+      </Unit4>
+      <Unit5>
         <Filename Value="messages/testnosoprotocolmessagespong.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="TestNosoProtocolMessagesPong"/>
-      </Unit4>
+      </Unit5>
+      <Unit6>
+        <Filename Value="../src/messages/nosoprotocol.messages.pong.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="NosoProtocol.Messages.Pong"/>
+      </Unit6>
     </Units>
   </ProjectOptions>
   <CompilerOptions>
