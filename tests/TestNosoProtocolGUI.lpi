@@ -21,8 +21,8 @@
             <Filename Value="../bin/TestNosoProtocol-GUI"/>
           </Target>
           <SearchPaths>
-            <IncludeFiles Value="$(ProjOutDir)"/>
-            <OtherUnitFiles Value="messages;../src/messages"/>
+            <IncludeFiles Value="$(ProjOutDir);../src"/>
+            <OtherUnitFiles Value="messages;../src;../src/messages"/>
             <UnitOutputDirectory Value="../bin/lib/$(TargetCPU)-$(TargetOS)"/>
           </SearchPaths>
           <Parsing>
@@ -66,8 +66,8 @@
             <Filename Value="../bin/TestNosoProtocol-GUI"/>
           </Target>
           <SearchPaths>
-            <IncludeFiles Value="$(ProjOutDir)"/>
-            <OtherUnitFiles Value="messages;../src/messages"/>
+            <IncludeFiles Value="$(ProjOutDir);../src"/>
+            <OtherUnitFiles Value="messages;../src;../src/messages"/>
             <UnitOutputDirectory Value="../bin/lib/$(TargetCPU)-$(TargetOS)"/>
           </SearchPaths>
           <CodeGeneration>
@@ -157,7 +157,7 @@
       <Filename Value="../bin/TestNosoProtocol-GUI"/>
     </Target>
     <SearchPaths>
-      <IncludeFiles Value="$(ProjOutDir)"/>
+      <IncludeFiles Value="$(ProjOutDir);../src"/>
       <OtherUnitFiles Value="messages;../src/messages"/>
       <UnitOutputDirectory Value="../bin/lib/$(TargetCPU)-$(TargetOS)"/>
     </SearchPaths>
