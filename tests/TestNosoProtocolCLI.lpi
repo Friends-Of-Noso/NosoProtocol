@@ -23,7 +23,7 @@
             <Filename Value="../bin/TestNosoProtocol-CLI"/>
           </Target>
           <SearchPaths>
-            <IncludeFiles Value="$(ProjOutDir)"/>
+            <IncludeFiles Value="$(ProjOutDir);../src"/>
             <OtherUnitFiles Value="messages;../src/messages"/>
             <UnitOutputDirectory Value="../bin/lib/$(TargetCPU)-$(TargetOS)"/>
           </SearchPaths>
@@ -63,7 +63,7 @@
             <Filename Value="../bin/TestNosoProtocol-CLI"/>
           </Target>
           <SearchPaths>
-            <IncludeFiles Value="$(ProjOutDir)"/>
+            <IncludeFiles Value="$(ProjOutDir);../src"/>
             <OtherUnitFiles Value="messages;../src/messages"/>
             <UnitOutputDirectory Value="../bin/lib/$(TargetCPU)-$(TargetOS)"/>
           </SearchPaths>
@@ -100,7 +100,7 @@
         <PackageName Value="FCL"/>
       </Item1>
     </RequiredPackages>
-    <Units Count="5">
+    <Units Count="7">
       <Unit0>
         <Filename Value="TestNosoProtocolCLI.lpr"/>
         <IsPartOfProject Value="True"/>
@@ -137,7 +137,7 @@
       <Filename Value="../bin/TestNosoProtocol-CLI"/>
     </Target>
     <SearchPaths>
-      <IncludeFiles Value="$(ProjOutDir)"/>
+      <IncludeFiles Value="$(ProjOutDir);../src"/>
       <OtherUnitFiles Value="messages;../src/messages"/>
       <UnitOutputDirectory Value="../bin/lib/$(TargetCPU)-$(TargetOS)"/>
     </SearchPaths>
