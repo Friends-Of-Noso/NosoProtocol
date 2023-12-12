@@ -66,7 +66,9 @@ end;
 procedure TTestNosoProtocolMessagesHandshake.TestNosoProtocolMessageHandshakeAsString;
 begin
   FProtocolMessageHandshake:= TProtocolMessageHandshake.Create(cHandshakeString);
+
   AssertEquals('Protocol Message Handshake String', cHandshakeString, FProtocolMessageHandshake.AsString);
+
   FProtocolMessageHandshake.Free;
 end;
 

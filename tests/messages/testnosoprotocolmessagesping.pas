@@ -25,6 +25,7 @@ type
   published
     procedure TestNosoProtocolMessagePingCreate;
     procedure TestNosoProtocolMessagePingCreateFromString;
+    procedure TestNosoProtocolMessagePingAsString;
   end;
 
 implementation
@@ -59,6 +60,26 @@ begin
 
   AssertNotNull('Protocol Message Ping is not null', FProtocolMessagePing);
   AssertEquals('Protocol Message Ping is of type pmtPing', Ord(pmtPing), Ord(FProtocolMessagePing.MessageType));
+  AssertEquals('Protocol Message Ping Magic String', cMagicString, FProtocolMessagePing.MagicString);
+  AssertEquals('Protocol Message Ping Protocol Version', cProtocolVersion, IntToStr(FProtocolMessagePing.ProtocolVersion));
+  AssertEquals('Protocol Message Ping Application Version', cApplicationVersion, FProtocolMessagePing.ApplicationVersion);
+  AssertEquals('Protocol Message Ping Timestamp', -1, FProtocolMessagePing.Timestamp);
+  AssertEquals('Protocol Message Ping Connections', -1, FProtocolMessagePing.Connections);
+  AssertEquals('Protocol Message Ping Block', -1, FProtocolMessagePing.Block);
+  AssertEquals('Protocol Message Ping Block Hash', EmptyStr, FProtocolMessagePing.BlockHash);
+  AssertEquals('Protocol Message Ping Summary Hash', EmptyStr, FProtocolMessagePing.SummaryHash);
+  AssertEquals('Protocol Message Ping Block', -1, FProtocolMessagePing.Block);
+  AssertEquals('Protocol Message Ping Pending', -1, FProtocolMessagePing.Pending);
+  AssertEquals('Protocol Message Ping Headers Hash', EmptyStr, FProtocolMessagePing.HeadersHash);
+  AssertEquals('Protocol Message Ping Connection Status', -1, FProtocolMessagePing.ConnectionStatus);
+  AssertEquals('Protocol Message Ping Port', -1, FProtocolMessagePing.Port);
+  AssertEquals('Protocol Message Ping Master Nodes Hash', EmptyStr, FProtocolMessagePing.MasterNodesHash);
+  AssertEquals('Protocol Message Ping Master Nodes Count', -1, FProtocolMessagePing.MasterNodesCount);
+  AssertEquals('Protocol Message Ping Difference Hash', EmptyStr, FProtocolMessagePing.DifferenceHash);
+  AssertEquals('Protocol Message Ping Checked Master Nodes', -1, FProtocolMessagePing.CheckedMasterNodes);
+  AssertEquals('Protocol Message Ping Governance Hash', EmptyStr, FProtocolMessagePing.GovernanceHash);
+  AssertEquals('Protocol Message Ping Config Hash', EmptyStr, FProtocolMessagePing.ConfigHash);
+  AssertEquals('Protocol Message Ping PSO Hash', EmptyStr, FProtocolMessagePing.PSOHash);
 
   FProtocolMessagePing.Free;
 end;
@@ -89,6 +110,15 @@ begin
   AssertEquals('Protocol Message Ping Governance Hash', 'D41D8CD98F00B204E9800998ECF8427E', FProtocolMessagePing.GovernanceHash);
   AssertEquals('Protocol Message Ping Config Hash', 'D41D8', FProtocolMessagePing.ConfigHash);
   AssertEquals('Protocol Message Ping PSO Hash', 'D41D8', FProtocolMessagePing.PSOHash);
+
+  FProtocolMessagePing.Free;
+end;
+
+procedure TTestNosoProtocolMessagesPing.TestNosoProtocolMessagePingAsString;
+begin
+  FProtocolMessagePing:= TProtocolMessagePing.Create(cPingString);
+
+  AssertEquals('Protocol Message Ping String', cPingString, FProtocolMessagePing.AsString);
 
   FProtocolMessagePing.Free;
 end;

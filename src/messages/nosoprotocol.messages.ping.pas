@@ -125,6 +125,22 @@ constructor TProtocolMessagePing.Create;
 begin
   inherited Create;
   FMessageType:= pmtPing;
+  FTimestamp:= -1;
+  FConnections:= -1;
+  FBlock:= -1;
+  FBlockHash:= EmptyStr;
+  FSummaryHash:= EmptyStr;
+  FPending:= -1;
+  FHeadersHash:= EmptyStr;
+  FConnectionStatus:= -1;
+  FPort:= -1;
+  FMasterNodesHash:= EmptyStr;
+  FMasterNodesCount:= -1;
+  FDifferenceHash:= EmptyStr;
+  FCheckedMasterNodes:= -1;
+  FGovernanceHash:= EmptyStr;
+  FConfigHash:= EmptyStr;
+  FPSOHash:= EmptyStr;
 end;
 
 constructor TProtocolMessagePing.Create(const AMessage: String);
@@ -153,7 +169,10 @@ begin
   FCheckedMasterNodes:= StrToInt(messageParams[16]);
   FGovernanceHash:= messageParams[17];
   FConfigHash:= messageParams[18];
-  FPSOHash:= messageParams[19];
+  if Length(messageParams) > 19 then
+  begin
+    FPSOHash:= messageParams[19];
+  end;
 
   SetLength(messageParams, 0);
 end;
