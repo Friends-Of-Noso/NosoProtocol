@@ -34,7 +34,7 @@ const
   cHandshakeString =
     cMagicString + ' ' +
     '127.0.0.1 ' +
-    cApplicationVersion + ' ' +
+    cLegacyVersion + ' ' +
     '120'
   ;
 
@@ -47,7 +47,7 @@ begin
   AssertNotNull('Protocol Message Handshake is not null', FProtocolMessageHandshake);
   AssertEquals('Protocol Message Handshake Magic String', cMagicString, FProtocolMessageHandshake.MagicString);
   AssertEquals('Protocol Message Handshake IP Address', '127.0.0.1', FProtocolMessageHandshake.IPAddress);
-  AssertEquals('Protocol Message Handshake Application Version', cApplicationVersion, FProtocolMessageHandshake.ApplicationVersion);
+  AssertEquals('Protocol Message Handshake Application Version', cLegacyVersion, FProtocolMessageHandshake.ApplicationVersion);
   AssertEquals('Protocol Message Handshake Timestamp', -1, FProtocolMessageHandshake.Timestamp);
   FProtocolMessageHandshake.Free;
 end;
@@ -58,7 +58,7 @@ begin
   AssertNotNull('Protocol Message Handshake is not null', FProtocolMessageHandshake);
   AssertEquals('Protocol Message Handshake Magic String', cMagicString, FProtocolMessageHandshake.MagicString);
   AssertEquals('Protocol Message Handshake IP Address', '127.0.0.1', FProtocolMessageHandshake.IPAddress);
-  AssertEquals('Protocol Message Handshake Application Version', cApplicationVersion, FProtocolMessageHandshake.ApplicationVersion);
+  AssertEquals('Protocol Message Handshake Application Version', cLegacyVersion, FProtocolMessageHandshake.ApplicationVersion);
   AssertEquals('Protocol Message Handshake Timestamp', 120, FProtocolMessageHandshake.Timestamp);
   FProtocolMessageHandshake.Free;
 end;

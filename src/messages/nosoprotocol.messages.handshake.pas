@@ -53,7 +53,7 @@ begin
   inherited Create;
   FMessageType:= pmtHandshake;
   FIPAddress:= '127.0.0.1';
-  FApplicationVersion:= cApplicationVersion;
+  FApplicationVersion:= cLegacyVersion;
   FTimestamp:= -1;
 end;
 

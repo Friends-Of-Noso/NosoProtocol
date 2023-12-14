@@ -34,7 +34,7 @@ const
   cPingString =
     cMagicString + ' ' +
     cProtocolVersion + ' ' +
-    cApplicationVersion + ' ' +
+    cLegacyVersion + ' ' +
     '120 ' +
     cMessagePing + ' ' +
     '0 ' +
@@ -62,7 +62,7 @@ begin
   AssertEquals('Protocol Message Ping is of type pmtPing', Ord(pmtPing), Ord(FProtocolMessagePing.MessageType));
   AssertEquals('Protocol Message Ping Magic String', cMagicString, FProtocolMessagePing.MagicString);
   AssertEquals('Protocol Message Ping Protocol Version', cProtocolVersion, IntToStr(FProtocolMessagePing.ProtocolVersion));
-  AssertEquals('Protocol Message Ping Application Version', cApplicationVersion, FProtocolMessagePing.ApplicationVersion);
+  AssertEquals('Protocol Message Ping Application Version', cLegacyVersion, FProtocolMessagePing.ApplicationVersion);
   AssertEquals('Protocol Message Ping Timestamp', -1, FProtocolMessagePing.Timestamp);
   AssertEquals('Protocol Message Ping Connections', -1, FProtocolMessagePing.Connections);
   AssertEquals('Protocol Message Ping Block', -1, FProtocolMessagePing.Block);
@@ -92,7 +92,7 @@ begin
   AssertEquals('Protocol Message Ping is of type pmtPing', Ord(pmtPing), Ord(FProtocolMessagePing.MessageType));
   AssertEquals('Protocol Message Ping Magic String', cMagicString, FProtocolMessagePing.MagicString);
   AssertEquals('Protocol Message Ping Protocol Version', cProtocolVersion, IntToStr(FProtocolMessagePing.ProtocolVersion));
-  AssertEquals('Protocol Message Ping Application Version', cApplicationVersion, FProtocolMessagePing.ApplicationVersion);
+  AssertEquals('Protocol Message Ping Application Version', cLegacyVersion, FProtocolMessagePing.ApplicationVersion);
   AssertEquals('Protocol Message Ping Timestamp', 120, FProtocolMessagePing.Timestamp);
   AssertEquals('Protocol Message Ping Connections', 0, FProtocolMessagePing.Connections);
   AssertEquals('Protocol Message Ping Block', 0, FProtocolMessagePing.Block);

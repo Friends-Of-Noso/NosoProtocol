@@ -12,7 +12,7 @@ uses
 const
   cMagicString = 'PSK';
   cProtocolVersion = '2';
-  cApplicationVersion = {$I application-version.inc};
+  cLegacyVersion = {$I application-version.inc};
 
   cMessagePing = '$PING';
   cMessagePong = '$PONG';
@@ -63,7 +63,7 @@ begin
   FMessageType:= pmtUnknown;
   FMagicString:= cMagicString;
   FProtocolVersion:= StrToInt(cProtocolVersion);
-  FApplicationVersion:= cApplicationVersion;
+  FApplicationVersion:= cLegacyVersion;
 end;
 
 end.

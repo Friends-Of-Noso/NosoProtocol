@@ -25,7 +25,7 @@ type
   published
     procedure TestNosoProtocolMessagePongCreate;
     procedure TestNosoProtocolMessagePongCreateFromMessage;
-    procedure TestNosoProtocolMessagePOngAsString;
+    procedure TestNosoProtocolMessagePongAsString;
   end;
 
 implementation
@@ -34,7 +34,7 @@ const
   cPongString =
     cMagicString + ' ' +
     cProtocolVersion + ' ' +
-    cApplicationVersion + ' ' +
+    cLegacyVersion + ' ' +
     '120 ' +
     cMessagePong + ' ' +
     '0 ' +
@@ -64,7 +64,7 @@ begin
   AssertEquals('Protocol Message Pong is of type pmtPong', Ord(pmtPong), Ord(FProtocolMessagePong.MessageType));
   AssertEquals('Protocol Message Ping Magic String', cMagicString, FProtocolMessagePong.MagicString);
   AssertEquals('Protocol Message Ping Protocol Version', cProtocolVersion, IntToStr(FProtocolMessagePong.ProtocolVersion));
-  AssertEquals('Protocol Message Ping Application Version', cApplicationVersion, FProtocolMessagePong.ApplicationVersion);
+  AssertEquals('Protocol Message Ping Application Version', cLegacyVersion, FProtocolMessagePong.ApplicationVersion);
   AssertEquals('Protocol Message Ping Timestamp', -1, FProtocolMessagePong.Timestamp);
   AssertEquals('Protocol Message Ping Connections', -1, FProtocolMessagePong.Connections);
   AssertEquals('Protocol Message Ping Block', -1, FProtocolMessagePong.Block);
@@ -94,7 +94,7 @@ begin
   AssertEquals('Protocol Message Ping is of type pmtPong', Ord(pmtPong), Ord(FProtocolMessagePong.MessageType));
   AssertEquals('Protocol Message Ping Magic String', cMagicString, FProtocolMessagePong.MagicString);
   AssertEquals('Protocol Message Ping Protocol Version', cProtocolVersion, IntToStr(FProtocolMessagePong.ProtocolVersion));
-  AssertEquals('Protocol Message Ping Application Version', cApplicationVersion, FProtocolMessagePong.ApplicationVersion);
+  AssertEquals('Protocol Message Ping Application Version', cLegacyVersion, FProtocolMessagePong.ApplicationVersion);
   AssertEquals('Protocol Message Ping Timestamp', 120, FProtocolMessagePong.Timestamp);
   AssertEquals('Protocol Message Ping Connections', 0, FProtocolMessagePong.Connections);
   AssertEquals('Protocol Message Ping Block', 0, FProtocolMessagePong.Block);
@@ -116,7 +116,7 @@ begin
   FProtocolMessagePong.Free;
 end;
 
-procedure TTestNosoProtocolMessagesPong.TestNosoProtocolMessagePOngAsString;
+procedure TTestNosoProtocolMessagesPong.TestNosoProtocolMessagePongAsString;
 begin
   FProtocolMessagePong:= TProtocolMessagePong.Create(cPongString);
 
